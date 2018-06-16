@@ -14,7 +14,7 @@ import requests
 data_dir = "/home/prod/data/stock_tick_data"
 sleep_time = 0.2
 cal_dates = ts.trade_cal()
-ip_pool = open("ippool.txt","r").readlines()
+ip_pool = open("data/ippool.txt","r").readlines()
 lock = Lock()
 
 def is_open_day(date):
@@ -73,7 +73,7 @@ def get_all_stock_id():
     #stock_info = ts.get_hs300s()
     #stock_info=ts.get_stock_basics()
     #codes = list(stock_info.index.values)
-    with open("hs300.txt","r") as rf:
+    with open("data/hs300.txt","r") as rf:
         hehe = rf.readlines()
     codes = []
     for line in hehe:
